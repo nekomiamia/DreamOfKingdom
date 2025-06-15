@@ -1,5 +1,4 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:Template name="CardTemplate" src="project://database/Assets/UI/CardTemplate.uxml?fileID=9197481963319205126&amp;guid=e1f24facda402be4fb49d59822155556&amp;type=3#CardTemplate" />
     <Style src="project://database/Assets/UI/USS/GameplayUSS.uss?fileID=7433441132597879392&amp;guid=b9b76da7b79efc0439057126597d5fbb&amp;type=3#GameplayUSS" />
     <ui:VisualElement style="flex-grow: 1; color: rgba(0, 0, 0, 0.8); -unity-background-image-tint-color: rgb(0, 0, 0); background-color: rgba(0, 0, 0, 0.68);">
         <ui:VisualElement name="Panel" style="flex-grow: 1; background-image: url(&apos;project://database/Assets/Art/UI%20Elements/CasltePanel.png?fileID=2800000&amp;guid=1786b13baa4564694856992ca7f5159f&amp;type=3#CasltePanel&apos;); -unity-background-scale-mode: scale-to-fit; position: absolute; width: 1200px; height: 730px; top: 160px; left: 360px;">
@@ -7,5 +6,4 @@
             <ui:Button text="确定" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ConfirmButton" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; -unity-font: url(&apos;project://database/Assets/Art/Fonts/IPix.ttf?fileID=12800000&amp;guid=8ef05da07e48dff4191d932f7287abbc&amp;type=3#IPix&apos;); font-size: 27px; background-image: url(&apos;project://database/Assets/Art/UI%20Elements/btn_endturn.png?fileID=2800000&amp;guid=fbde03eb589af4d30b6371b9ea026ca4&amp;type=3#btn_endturn&apos;); -unity-background-scale-mode: scale-to-fit; background-color: rgba(188, 188, 188, 0); position: absolute; top: 587px; left: 500px; width: 152px; height: 60px; -unity-font-style: bold; right: 500px; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0;" />
         </ui:VisualElement>
     </ui:VisualElement>
-    <ui:Instance template="CardTemplate" name="CardTemplate" />
 </ui:UXML>
