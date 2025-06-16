@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: EnemyHP
   m_EditorClassIdentifier: 
   maxValue: 50
-  curValue: 50
+  curValue: 0
   valueChangedEvent: {fileID: 11400000, guid: 0ce54ce011a854e4f8143aace90f7000, type: 2}
   description: 

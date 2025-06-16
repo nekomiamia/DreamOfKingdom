@@ -55,4 +55,9 @@ public class PlayerAnimator : MonoBehaviour
                 throw new ArgumentOutOfRangeException();
         }
     }
+    
+    public void SetSleepAnimation()
+    {
+        animator.Play("death");
+    }
 }

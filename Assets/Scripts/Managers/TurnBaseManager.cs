@@ -103,6 +103,7 @@ public class TurnBaseManager : MonoBehaviour
                 break;
             case RoomType.RestRoom:
                 player.gameObject.SetActive(true);
+                player.gameObject.GetComponent<PlayerAnimator>().SetSleepAnimation();
                 break;
 
             default:
