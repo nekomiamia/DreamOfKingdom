@@ -13,7 +13,7 @@ public class GameWinPanel : MonoBehaviour
     public ObjectEventSO loadMapEvent; // 加载地图事件
     public ObjectEventSO pickCardEvent; // 选新卡事件
 
-    private void Awake()
+    private void OnEnable()
     {
         rootElement = GetComponent<UIDocument>().rootVisualElement;
         pickCardButton = rootElement.Q<Button>("PickCardButton");
@@ -30,6 +30,7 @@ public class GameWinPanel : MonoBehaviour
 
     private void OnPickCardButtonClicked()
     {
+        Debug.Log("Pick Card Button Clicked");
         pickCardEvent.RaiseEvent(null, this);
     }
     
