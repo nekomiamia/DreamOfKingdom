@@ -73,4 +73,13 @@ public class BuffHolder : MonoBehaviour
             }
         }
     }
+    
+    public void RemoveAllBuffs()
+    {
+        foreach (var buff in buffs.ToList()) // 使用ToList()防止在遍历时修改集合
+        {
+            RemoveBuff(buff);
+        }
+        buffs.Clear(); // 清空buff列表
+    }
 }

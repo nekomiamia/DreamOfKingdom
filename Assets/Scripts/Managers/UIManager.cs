@@ -10,7 +10,6 @@ public class UIManager : MonoBehaviour
     public GameObject gameWinPanel;
     public GameObject gameLosePanel;
     public GameObject pickCardPanel;
-    
     public void OnLoadRoomEvent(object data)
     {
         Room curRoom = (Room)data;
@@ -42,6 +41,7 @@ public class UIManager : MonoBehaviour
         gameplayPanel.SetActive(false);
         gameWinPanel.SetActive(false);
         gameLosePanel.SetActive(false);
+        pickCardPanel.SetActive(false);
     }
     
     

@@ -11,6 +11,7 @@ public class SceneLoadManager : MonoBehaviour
 {
     private AssetReference curScene;
     public AssetReference map;
+    public AssetReference menu;
     public Room curRoom;
     private Vector2Int curRoomVec;
     
@@ -19,9 +20,10 @@ public class SceneLoadManager : MonoBehaviour
 
     public ObjectEventSO updateRoomEvent;
 
-    private void Start()
+    private void Awake()
     {
         curRoomVec = Vector2Int.one * -1; // 初始化为-1，表示未加载房间
+        LoadMenu();
     }
 
     public async void OnLoadRoomEvent(object data)
@@ -69,6 +71,14 @@ public class SceneLoadManager : MonoBehaviour
             updateRoomEvent.RaiseEvent(curRoomVec, this);
         }
         curScene = map;
+        await LoadSceneTask();
+    }
+    
+    public async void LoadMenu()
+    {
+        if(curScene!=null)
+            await UnloadSceneTask();
+        curScene = menu;
         await LoadSceneTask();
     }
 }

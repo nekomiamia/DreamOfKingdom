@@ -19,6 +19,11 @@ public class GameManager : MonoBehaviour
     public void UpdateMapLayoutData(object roomVector)
     {
         var roomVec = (Vector2Int)roomVector;
+        if(mapLayout.mapRoomDataList.Count == 0)
+        {
+            Debug.LogError("地图布局数据为空，请先生成地图布局。");
+            return;
+        }
         var curRoom = mapLayout.mapRoomDataList.Find(r => r.column == roomVec.x&& r.line == roomVec.y);
 
         curRoom.roomState = RoomState.Visited;
@@ -75,5 +80,11 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1.5f);
         eventSO.RaiseEvent(null, this);
+    }
+
+    public void OnNewGameStart()
+    {
+        mapLayout.mapRoomDataList.Clear();
+        mapLayout.linePositionList.Clear();
     }
 }

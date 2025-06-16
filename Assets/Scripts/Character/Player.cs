@@ -17,7 +17,6 @@ public class Player : CharacterBase
     {
         playerMana.maxValue = maxMana;
         CurMana = playerMana.maxValue;
-         
     }
 
     /// <summary>
@@ -35,5 +34,14 @@ public class Player : CharacterBase
         {
             CurMana = 0;
         }
+    }
+
+    public void NewGame()
+    {
+        CurHP = MaxHP;
+        isDead = false;
+        GetComponent<BuffHolder>()?.RemoveAllBuffs();
+        gameObject.SetActive(false);
+        NewTurn();
     }
 }

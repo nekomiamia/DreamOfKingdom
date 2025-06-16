@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30b601f83c8347b48c31e49142b44561, type: 3}
-  m_Name: EnemyHP
+  m_Script: {fileID: 11500000, guid: d7af57ee6cb94086b2e9188a1e7e1354, type: 3}
+  m_Name: NewGameEvent
   m_EditorClassIdentifier: 
-  maxValue: 50
-  curValue: 50
-  valueChangedEvent: {fileID: 11400000, guid: 0ce54ce011a854e4f8143aace90f7000, type: 2}
-  description: 
+  description: "\u65B0\u6E38\u620F"
+  lastSender: 

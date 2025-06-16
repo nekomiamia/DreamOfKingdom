@@ -20,7 +20,7 @@ public class HPBarController : MonoBehaviour
         curCharacter = GetComponent<CharacterBase>();
     }
 
-    private void Start()
+    private void OnEnable()
     {
         InitHealthBar();
     }
