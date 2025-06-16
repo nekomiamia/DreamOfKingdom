@@ -1985,7 +1985,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1694325081}
         m_TargetAssemblyTypeName: Player, Assembly-CSharp
-        m_MethodName: NewGame
+        m_MethodName: BackToMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -58,6 +58,7 @@ public class Enemy : CharacterBase
 
     IEnumerator ProcessDelayAction(string actionName)
     {
+        yield return new WaitForSeconds(0.5f);
         animator.SetTrigger(actionName);
         yield return new WaitUntil(()=>animator.GetCurrentAnimatorStateInfo(0).normalizedTime % 1.0f > 0.6f &&
                                        ! animator.IsInTransition(0)&&

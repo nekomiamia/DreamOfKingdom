@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30b601f83c8347b48c31e49142b44561, type: 3}
-  m_Name: EnemyHP
+  m_Script: {fileID: 11500000, guid: fb980e24652d40e5b5f4fef5b73393b7, type: 3}
+  m_Name: EnemyHeal2
   m_EditorClassIdentifier: 
-  maxValue: 200
-  curValue: 0
-  valueChangedEvent: {fileID: 11400000, guid: 0ce54ce011a854e4f8143aace90f7000, type: 2}
-  description: 
+  value: 20
+  targetType: 0

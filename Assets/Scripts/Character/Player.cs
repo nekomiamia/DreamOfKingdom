@@ -6,7 +6,6 @@ public class Player : CharacterBase
 {
     public IntVariable playerMana;
     public int maxMana;
-
     public int CurMana
     {
         get => playerMana.curValue;
@@ -39,6 +38,14 @@ public class Player : CharacterBase
     public void NewGame()
     {
         CurHP = MaxHP;
+        isDead = false;
+        GetComponent<BuffHolder>()?.RemoveAllBuffs();
+        gameObject.SetActive(false);
+        NewTurn();
+    }
+    
+    public void BackToMap()
+    {
         isDead = false;
         GetComponent<BuffHolder>()?.RemoveAllBuffs();
         gameObject.SetActive(false);

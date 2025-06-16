@@ -63,8 +63,11 @@ public class GameManager : MonoBehaviour
             // 发出失败的通知
             StartCoroutine(EventDelayAction(gameLoseEvent));
         }
-
-        if (obj is Enemy)
+        if (obj is Boss)
+        {
+            aLiveEnemies.Remove(obj as Boss);
+            StartCoroutine(EventDelayAction(gameLoseEvent));
+        }else if (obj is Enemy)
         {
             aLiveEnemies.Remove(obj as Enemy);
             
@@ -74,6 +77,8 @@ public class GameManager : MonoBehaviour
                 StartCoroutine(EventDelayAction(gameWinEvent));
             }
         }
+        
+
     }
 
     IEnumerator EventDelayAction(ObjectEventSO eventSO)
