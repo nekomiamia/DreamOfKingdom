@@ -24,6 +24,7 @@ public class CardManager: MonoBehaviour
 
         foreach (CardLibEntry entry in newGameCardLib.cardLibList)
         {
+            Debug.Log($"卡牌库初始化: {entry.cardData.name}, 数量: {entry.count}");
             currentCardLib.cardLibList.Add(entry);
         }
     }

@@ -9,6 +9,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoadManager : MonoBehaviour
 {
+    public FadePanel fadePanel;
     private AssetReference curScene;
     public AssetReference map;
     public AssetReference menu;
@@ -50,12 +51,15 @@ public class SceneLoadManager : MonoBehaviour
 
         if (s.Status == AsyncOperationStatus.Succeeded)
         {
+            fadePanel.FadeOut(0.2f);
             SceneManager.SetActiveScene(s.Result.Scene);
         }
     }
     
     private async Task UnloadSceneTask()
     {
+        fadePanel.FadeIn(0.4f);
+        await Task.Delay(450); // 等待淡入动画完成
         var unloadOperation = SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
         while (!unloadOperation.isDone)
         {

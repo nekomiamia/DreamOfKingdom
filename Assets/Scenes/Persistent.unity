@@ -696,6 +696,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f19d9972db021ed45b48950f5f3abc30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadePanel: {fileID: 2054613290}
   map:
     m_AssetGUID: e86bd3a2e4153d947afbe5f889916c11
     m_SubObjectName: 
@@ -990,7 +991,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14fbc2c6968e4295a2291d1ad50fab5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventSO: {fileID: 11400000, guid: 1e09118dc0af6b84aacd5aeeaa2d01ad, type: 2}
+  eventSO: {fileID: 11400000, guid: d29b0b5c468cc1a4a85c51c1cfdcc91f, type: 2}
   response:
     m_PersistentCalls:
       m_Calls:
@@ -1333,6 +1334,7 @@ GameObject:
   - component: {fileID: 1488728147}
   - component: {fileID: 1488728149}
   - component: {fileID: 1488728148}
+  - component: {fileID: 1488728150}
   m_Layer: 0
   m_Name: CardDeck
   m_TagString: Untagged
@@ -1532,6 +1534,34 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: CardDeck, Assembly-CSharp
         m_MethodName: ReleaseAllCards
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1488728150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1488728141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14fbc2c6968e4295a2291d1ad50fab5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSO: {fileID: 11400000, guid: d29b0b5c468cc1a4a85c51c1cfdcc91f, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1488728142}
+        m_TargetAssemblyTypeName: CardDeck, Assembly-CSharp
+        m_MethodName: Init
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2663,6 +2693,67 @@ MonoBehaviour:
   CardManager: {fileID: 1967305230}
   cardTemplate: {fileID: 9197481963319205126, guid: e1f24facda402be4fb49d59822155556, type: 3}
   pickCardEvent: {fileID: 11400000, guid: 775c0f2f7ab099442beb3a0edbaccaae, type: 2}
+--- !u!1 &2054613287
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2054613289}
+  - component: {fileID: 2054613288}
+  - component: {fileID: 2054613290}
+  m_Layer: 0
+  m_Name: FadePanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2054613288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054613287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PanelSettings: {fileID: 11400000, guid: 51d7744356376c34d8dd6b6c3c6a73ed, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: 8981e02f859080c46a76f51a8ace2361, type: 3}
+  m_SortingOrder: 20
+--- !u!4 &2054613289
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054613287}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2054613290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054613287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c637765efd4402f97806f57e3cc15fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2059915555
 GameObject:
   m_ObjectHideFlags: 0
@@ -2844,3 +2935,4 @@ SceneRoots:
   - {fileID: 2002991380}
   - {fileID: 1896127443}
   - {fileID: 211289022}
+  - {fileID: 2054613289}

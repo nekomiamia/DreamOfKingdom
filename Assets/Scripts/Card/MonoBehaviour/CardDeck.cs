@@ -22,8 +22,6 @@ public class CardDeck : MonoBehaviour
     
     private void Start()
     {
-        // 测试
-        Init(); 
     }
 
     public void Init()

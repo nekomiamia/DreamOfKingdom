@@ -13,12 +13,14 @@ public class DamageEffect : Effect
             case EffectTargetType.Target:
                 var curValue =  value * from.damageMultiplier;
                 target.TakeDamage((int)curValue);
+                target.GetComponent<BuffHolder>().ExecuteAllHitBuff();
                 Debug.Log($"DamageEffect executed on {target.name} with value {curValue}");
                 break;
             case EffectTargetType.All:
                 foreach (var enemy in GameObject.FindGameObjectsWithTag("Enemy"))
                 {
                     enemy.GetComponent<CharacterBase>().TakeDamage(value);
+                    enemy.GetComponent<BuffHolder>().ExecuteAllHitBuff();
                 }
                 break;
             

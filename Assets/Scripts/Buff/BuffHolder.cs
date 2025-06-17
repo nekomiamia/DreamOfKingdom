@@ -59,6 +59,19 @@ public class BuffHolder : MonoBehaviour
         }
     }
 
+    public void ExecuteAllHitBuff()
+    {
+        var hitBuffs = buffs.Where(b => b.buffData.type == BuffType.Hit).ToList();
+
+        foreach (var buff in hitBuffs.ToList()) // 使用ToList()防止在遍历时修改集合
+        {
+            buff.OnEffect();
+            if (buff.curLayer <= 0) // 如果是永久buff则不移除
+            {
+                RemoveBuff(buff);
+            }
+        }
+    }
 
     public void ExecuteAllTurnBeginBuff()
     {

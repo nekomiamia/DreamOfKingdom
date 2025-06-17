@@ -35,6 +35,30 @@ MonoBehaviour:
     m_SerializedLabels:
     - CardData
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a2ba84c1d9b0ae843a8d7138d54ba415
+    m_Address: DrawCard
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CardData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 36f8b3bb3cdd432449697d1f24360033
+    m_Address: Power
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CardData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d06a147889783d8479d38425fd0f9062
+    m_Address: Poison
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CardData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d2b085ab2c0ae634e8b80ada67307d68
+    m_Address: DeDamage
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CardData
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 90f6fbaf97c5482468023fe1c841eb90, type: 2}
   m_SchemaSet:
